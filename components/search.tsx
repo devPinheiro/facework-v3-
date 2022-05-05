@@ -5,7 +5,7 @@ interface SearchProps {
 }
 const Search: React.FC<SearchProps> = ({inverse}) => {
   return (
-    <div className='flex items-center bg-[#FAFAFC] px-4 py-2 space-x-3 w-2/3 max-w-md rounded-2xl ml-4 hover:shadow-xl transition-shadow'>
+    <div className='flex items-center bg-[#FAFAFC] px-4 py-2 space-x-3 w-2/3 max-w-md rounded-3xl ml-4 hover:shadow-xl transition-shadow'>
       <input
         type='text'
         placeholder='Find Connections'
