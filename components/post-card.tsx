@@ -70,16 +70,17 @@ const PostCard: React.FC<PostCardProps> = ({
               </Link>
               <div className='flex-column '>
                 <p className='ml-3 text-sm font-bold text-grey-dark'>{name}</p>
-                <div className='flex items-center'>
-                  <p className='ml-3 text-xs font-medium text-grey-light'>
-                    {occupation}
-                  </p>
-                  {'・'}
-                  <p className='ml-1 text-xs font-medium text-grey-light'>
-                    {'Facework Inc.'} 🚀
-                  </p>
-                  <small className='ml-1 text-xs'>・</small>
-
+                <div className='flex  items-center'>
+                  <div className='flex items-center'>
+                    <p className='ml-3 text-xs font-medium text-grey-light elipsable'>
+                      {occupation}
+                    </p>
+                    {'・'}
+                    <p className='ml-1 text-xs font-medium text-grey-light elipsable'>
+                      {'Facework Inc.'} 🚀
+                    </p>
+                    {'・'}
+                  </div>
                   <p className='text-xs font-normal text-gray-400 ml-1'>
                     <MomentHelper time={time} />
                   </p>
@@ -109,7 +110,7 @@ const PostCard: React.FC<PostCardProps> = ({
                       leave='transition ease-in duration-150'
                       leaveFrom='opacity-100 translate-y-0'
                       leaveTo='opacity-0 translate-y-1'>
-                      <Popover.Panel className='absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-48 max-w-md sm:px-0'>
+                      <Popover.Panel className='absolute z-10  -left-full transform -translate-x-1/2 mt-3 px-2 w-48 max-w-md sm:px-0'>
                         <div className='rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden'>
                           <div className='relative grid gap-6 bg-white px-2 py-6 sm:gap-8 sm:px-5'>
                             <a
