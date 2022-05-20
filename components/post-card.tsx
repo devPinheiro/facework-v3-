@@ -7,6 +7,9 @@ import ErrorBoundary from './error-boundary';
 import MomentHelper from './moment';
 import { FlagIcon, ShareIcon, UserAddIcon } from '@heroicons/react/outline';
 import styles from '../styles/PostCard.module.css';
+
+
+
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
@@ -72,11 +75,13 @@ const PostCard: React.FC<PostCardProps> = ({
                 <p className='ml-3 text-sm font-bold text-grey-dark'>{name}</p>
                 <div className='flex  items-center'>
                   <div className='flex items-center'>
-                    <p className='ml-3 text-xs font-medium text-grey-light elipsable'>
+                    <p
+                      className={`flex ml-3 text-xs font-medium text-grey-light ${styles.elipsable}`}>
                       {occupation}
                     </p>
                     {'・'}
-                    <p className='ml-1 text-xs font-medium text-grey-light elipsable'>
+                    <p
+                      className={`flex ml-1 text-xs font-medium text-grey-light`}>
                       {'Facework Inc.'} 🚀
                     </p>
                     {'・'}
@@ -197,7 +202,7 @@ const PostCard: React.FC<PostCardProps> = ({
                         className={classNames(
                           open
                             ? 'hidden'
-                            : `${styles.textToggle} font-medium text-black hover:text-gray-500 text-sm flex items-center justify-center bg-gray-200 h-16 w-full -top-4`
+                            : `${styles.textToggle} font-medium text-black hover:text-gray-500 text-sm flex items-center justify-center bg-gray-200 h-16 w-full -top-4 `
                         )}
                         disabled={open}>
                         Read more
