@@ -1,15 +1,20 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import FollowCard from '../components/follow-card'
-import Footer from '../components/footer'
-
-import Header from '../components/header'
-import OpportunityCard from '../components/opportunity-card'
-import PostCard from '../components/post-card'
-import ProfileCard from '../components/profile-card'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { useState } from 'react';
+import Carousel from '../components/carousel';
+import FollowCard from '../components/follow-card';
+import Footer from '../components/footer';
+import Header from '../components/header';
+import Button from '../components/button';
+import Modal from '../components/modal';
+import OpportunityCard from '../components/opportunity-card';
+import PostCard from '../components/post-card';
+import ProfileCard from '../components/profile-card';
+import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -22,8 +27,11 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-
+      <Modal visibility={open} toggleVisibility={() => setOpen(!open)} />
+      <Carousel />
       <ProfileCard />
+
+      <Button id='toggle-modal' customStyle='bg-gray-50' action={() => setOpen(!open)}>Toggle Modal</Button>
 
       <FollowCard
         avatar='https://avatars3.githubusercontent.com/u/11801238?v=4'
@@ -82,6 +90,6 @@ const Home: NextPage = () => {
       <Footer />
     </div>
   );
-}
+};
 
-export default Home
+export default Home;
