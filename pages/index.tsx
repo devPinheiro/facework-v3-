@@ -1,8 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import FollowCard from '../components/follow-card'
 import Footer from '../components/footer'
 
 import Header from '../components/header'
+import OpportunityCard from '../components/opportunity-card'
 import PostCard from '../components/post-card'
 import ProfileCard from '../components/profile-card'
 import styles from '../styles/Home.module.css'
@@ -22,6 +24,13 @@ const Home: NextPage = () => {
       <Header />
 
       <ProfileCard />
+
+      <FollowCard
+        avatar='https://avatars3.githubusercontent.com/u/11801238?v=4'
+        occupation={'Software Company'}
+        company='Facework Inc.'
+        name={'Facework Bot 🤖'}
+      />
 
       <PostCard
         title={'Facework v3 launch party🚀🚀🚀🚀'}
@@ -57,6 +66,17 @@ const Home: NextPage = () => {
         profilePage={''}
         modalVisibility={false}
         video={''}
+      />
+
+      <OpportunityCard
+        avatar='https://avatars3.githubusercontent.com/u/11801238?v=4'
+        time={'2022-05-12 10:11:29,573'}
+        company='Facework Inc.'
+        location='Remote'
+        role='Senior Backend Engineer'
+        roleType='Full-time'
+        occupation='CEO'
+        name='Facework Bot'
       />
 
       <Footer />
