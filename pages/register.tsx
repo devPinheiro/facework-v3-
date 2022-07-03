@@ -25,7 +25,7 @@ import axios from 'axios';
 import Router from 'next/router';
 
 export default function Register() {
-  const [error, setError] = React.useState(null);
+  const [error, setError] = React.useState<any>(null);
   const [loading, setLoading] = React.useState(false);
 
   const {
